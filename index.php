@@ -26,7 +26,7 @@
 			<li>Submits the  information for the purchase to be processed and effective</>
 			<li>Waits for a confirmation number for purchase</li>
 			<li>Electronic purchase receipt</li>
-			10.   <li>He prints the receipt or store the e-copy in his system</li>
+			<li>He prints the receipt or store the e-copy in his system</li>
 		</ol>
 		<h2>User Case 2</h2>
 		<ol>
