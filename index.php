@@ -22,7 +22,7 @@
 			<li>He must opens website</li>
 			<li>He may  or may not create a user account</li>
 			<li>He must enter the name of the product in the site web shopper search engine</li>
-			<li>He get a number of products played from alternative vendor</li>
+			<li>He get a number of products played from alternative vendors</li>
 			<li>He searches and Clicks on the products</li>
 			<li>He finds the product he is looking for</li>
 			<li> He clicks on the product</li>
@@ -42,7 +42,7 @@
 			<li>Buyer must open the website</li>
 			<li>Buyer may  or may not create a user account</li>
 			<li>He  enters the name of product he is looking for  into the site web shopper search engine</li>
-			<li>He gets a number  of  products displayed from alternative vendors.</li>
+			<li>He gets a number  of  products displayed from alternative vendors</li>
 			<li>He  clicks on a brand and product and go through all the ones of interest to him</li>
 			<li>Searching and reading the reviews from previous shoppers</li>
 			<li>He goes through all the brand and products and finds one after careful considerations</li>
