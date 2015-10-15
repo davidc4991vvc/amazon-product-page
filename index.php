@@ -16,7 +16,7 @@
 			option, increases his experience and possibility of developing a confident attitudes towards new online
 			shopping ventures. He is generally the age of 25 and above.</p>
 
-		<h1>User Case</h1>
+		<h1>User Cases</h1>
 		<h2>User Case 1</h2>
 		<ol>
 			<li>he must opens website</li>
