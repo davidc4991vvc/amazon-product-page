@@ -60,5 +60,14 @@
 		</ul>
 		<h3>Entity #2: Brand</h3>
 		<h4>Brand attributes</h4>
+		<ul>
+			<li>color</li>
+			<li>Name</li>
+			<li>Price</li>
+			<li>description</li>
+			<li>size</li>
+			<li>Quality</li>
+			<li>User friendliness of product</li>
+		</ul>
 	</body>
 </html>
