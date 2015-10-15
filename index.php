@@ -7,13 +7,13 @@
 	<body>
 		<h1>Shopper's Persona</h1>
 
-		<p>Jesse James is a middle class  similar in character to online shoppers. He knows what he wants
-			but does not have time to go out shopping and wants his product delivered to him at his residence. And also he
-			may want his product as soon as possible. He may decide to do some online research about product before making
+		<p>Jesse James is a middle class music teacher. He knows what he wants
+			but does not have time to go out shopping and wants his product delivered to him at his residence. Also, he
+			may want his product as soon as possible or he may decide to do some online research about products before making
 			a purchase. Generally in this case, he is in no hurry to get the product. He must have a laptop, Intel core i3
 			Windows 7 and has access to the Internet. He has a valid method of payment in order to make an online
-			transaction. He is educated enough to comfortably browse the internet. Continuous use of the online shopping
-			option, increases his experience and possibility of developing a confident attitudes towards new online
+			transaction. He is educated enough to comfortably browse the internet and a continuous use of the online shopping
+			option, can increase his experience and a confident attitude towards new online
 			shopping ventures. He is generally the age of 25 and above.</p>
 
 		<h1>User Cases</h1>
