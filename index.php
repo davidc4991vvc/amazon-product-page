@@ -7,7 +7,7 @@
 	<body>
 		<h1>Shopper's Persona</h1>
 
-		<p>He has a level of income and responsibility similar in character to online shoppers. He knows what he wants
+		<p>Jesse James is a middle class  similar in character to online shoppers. He knows what he wants
 			but does not have time to go out shopping and wants his product delivered to him at his residence. And also he
 			may want his product as soon as possible. He may decide to do some online research about product before making
 			a purchase. Generally in this case, he is in no hurry to get the product. He must have a laptop, Intel core i3
@@ -17,9 +17,9 @@
 			shopping ventures. He is generally the age of 25 and above.</p>
 
 		<h1>User Cases</h1>
-		<h2>User Case 1</h2>
+		<h2>User Case 1 Goal</h2>
 		<ol>
-			<li>he must opens website</li>
+			<li>He must opens website</li>
 			<li>He may  or may not create a user account</li>
 			<li>Searches and Clicks on the product</li>
 			<li>He enters his personal and  credit card information</li>
@@ -28,7 +28,7 @@
 			<li>Electronic purchase receipt</li>
 			<li>He prints the receipt or store the e-copy in his system</li>
 		</ol>
-		<h2>User Case 2</h2>
+		<h2>User Case 2 Goal</h2>
 		<ol>
 			<li>Buyer must open the website</li>
 			<li>Buyer may  or may not create a user account</li>
@@ -50,24 +50,20 @@
 		<h3> Entity #1: Product</h3>
 		<h4>Product attributes;</h4>
 		<ul>
-			<li>color</li>
 			<li>Name</li>
 			<li>Price</li>
 			<li>description</li>
-			<li>size</li>
-			<li>Quality</li>
-			<li>User friendliness of product</li>
+			<li>Star Rating</li>
 		</ul>
-		<h3>Entity #2: Brand</h3>
-		<h4>Brand attributes</h4>
+		<h3>Entity #2: Seller</h3>
+		<h4>Seller's attributes</h4>
 		<ul>
-			<li>color</li>
 			<li>Name</li>
-			<li>Price</li>
-			<li>description</li>
-			<li>size</li>
-			<li>Quality</li>
-			<li>User friendliness of product</li>
+			<li>Email accounts</li>
+			<li>Products</li>
 		</ul>
+		<h3>Relasionships</h3>
+			<p>Jesse Jame can buy a product from the seller which is a one to one relationship</p>
+			<p>The seller can have many products, which is a one to many relationship</p>
 	</body>
 </html>
