@@ -31,10 +31,10 @@
 			<li>He checks out product</li>
 			<li>The personal information screen opens up</li>
 			<li>He enters his personal and  credit card information</li>
-			<li>Submits the  information for the purchase</li>
+			<li>Submits the information for the purchase</li>
 			<li>Computer processes the purchase</>
 			<li>Waits for a confirmation number for purchase to be effective</li>
-			<li>Electronic purchase receipt</li>
+			<li>Computer bring up the comfirmation number and electronic receipt</li>
 			<li>He prints the receipt or store the e-copy in his system</li>
 		</ol>
 		<h2>User Case 2 Goal</h2>
@@ -52,9 +52,10 @@
 			<li>The personal information screen opens up</li>
 			<li>He checks out</li>
 			<li>Enters  his personal and credit card information</li>
-			<li>bmits information for purchase to be processed and effective</li>
-			<li>Waits for confirmation number  of purchase</li>
-			<li>Electronic purchase receipt</li>
+			<li>Submits information for purchase</li>
+			<li>Computer processed the purchase</li>
+			<li>Waits for confirmation number for  purchase to be effective</li>
+			<li>Computer bring up the comfirmation number and electronic receipt</li>
 			<li>He prints the receipt or store the e-copy in his system</li>
 		</ol>
 		<h2>Conceptual Model:</h2>
