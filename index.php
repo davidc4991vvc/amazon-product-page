@@ -46,5 +46,19 @@
 			<li>Electronic purchase receipt</li>
 			<li>He prints the receipt or store the e-copy in his system</li>
 		</ol>
+		<h2>Conceptual Model:</h2>
+		<h3> Entity #1: Product</h3>
+		<h4>Product attributes;</h4>
+		<ul>
+			<li>color</li>
+			<li>Name</li>
+			<li>Price</li>
+			<li>description</li>
+			<li>size</li>
+			<li>Quality</li>
+			<li>User friendliness of product</li>
+
+
+		</ul>
 	</body>
 </html>
