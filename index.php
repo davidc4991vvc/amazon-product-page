@@ -7,14 +7,14 @@
 	<body>
 		<h1>Shopper's Persona</h1>
 
-		<p>Jesse James is a middle class music teacher. He knows what he wants
+		<p>Jesse is a middle class music teacher. He knows what he wants
 			but does not have the time to go out shopping and wants his product delivered to him at his residence. Also, he
 			may want his product as soon as possible or he may decide to do some online research about product before making
 			a purchase. Generally in this case, he is in no hurry to get the product. He must have a laptop, Intel core i3
 			Windows 7 and has access to the Internet. He has a valid method of payment in order to make an online
 			transaction. He is educated enough to comfortably browse the internet and a continuous use of the online shopping
 			option, can increase his experience and a confident attitude towards new online
-			shopping ventures. Jesse James is 27 years old</p>
+			shopping ventures. Jesse is 27 years old</p>
 
 		<h1>User Cases</h1>
 		<h2>User Case 1 Goal</h2>
