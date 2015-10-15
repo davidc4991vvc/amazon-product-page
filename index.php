@@ -14,7 +14,7 @@
 			Windows 7 and has access to the Internet. He has a valid method of payment in order to make an online
 			transaction. He is educated enough to comfortably browse the internet and a continuous use of the online shopping
 			option, can increase his experience and a confident attitude towards new online
-			shopping ventures. He is generally the age of 25 and above.</p>
+			shopping ventures. Jesse James is 27 years old</p>
 
 		<h1>User Cases</h1>
 		<h2>User Case 1 Goal</h2>
