@@ -8,7 +8,7 @@
 		<h1>Shopper's Persona</h1>
 
 		<p>Jesse James is a middle class music teacher. He knows what he wants
-			but does not have time to go out shopping and wants his product delivered to him at his residence. Also, he
+			but does not have the time to go out shopping and wants his product delivered to him at his residence. Also, he
 			may want his product as soon as possible or he may decide to do some online research about products before making
 			a purchase. Generally in this case, he is in no hurry to get the product. He must have a laptop, Intel core i3
 			Windows 7 and has access to the Internet. He has a valid method of payment in order to make an online
