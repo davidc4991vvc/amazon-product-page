@@ -21,10 +21,19 @@
 		<ol>
 			<li>He must opens website</li>
 			<li>He may  or may not create a user account</li>
-			<li>Searches and Clicks on the product</li>
+			<li>He must enter the name of the product in the site web shopper search engine</li>
+			<li>He get a number of products played from alternative vendor</li>
+			<li>He searches and Clicks on the products</li>
+			<li>He finds the product he is looking for</li>
+			<li> He clicks on the product</li>
+			<li>He puts product in the carte</li>
+			<li>The Check out screen opens up</li>
+			<li>He checks out product</li>
+			<li>The personal information screen opens up</li>
 			<li>He enters his personal and  credit card information</li>
-			<li>Submits the  information for the purchase to be processed and effective</>
-			<li>Waits for a confirmation number for purchase</li>
+			<li>Submits the  information for the purchase</li>
+			<li>Computer processes the purchase</>
+			<li>Waits for a confirmation number for purchase to be effective</li>
 			<li>Electronic purchase receipt</li>
 			<li>He prints the receipt or store the e-copy in his system</li>
 		</ol>
@@ -39,6 +48,8 @@
 			<li>He goes through all the brand and products and finds one after careful considerations</li>
 			<li>He finds the product with a good rating that meets his expectations</li>
 			<li>He puts the selected product  in the carte</li>
+			<li>The Check out screen pops up</li>
+			<li>The personal information screen opens up</li>
 			<li>He checks out</li>
 			<li>Enters  his personal and credit card information</li>
 			<li>bmits information for purchase to be processed and effective</li>
@@ -63,7 +74,6 @@
 			<li>Products</li>
 		</ul>
 		<h3>Relasionships</h3>
-			<p>Jesse Jame can buy a product from the seller which is a one to one relationship</p>
 			<p>The seller can have many products, which is a one to many relationship</p>
 	</body>
 </html>
