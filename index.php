@@ -62,15 +62,15 @@
 		<h3> Entity #1: Seller</h3>
 		<h4>Seller attributes;</h4>
 		<ul>
-			<li>sellerId</li>
+			<li>SellerId</li>
 			<li>Email Account</li>
 			<li>Name</li>
 		</ul>
 		<h3>Entity #2: Product</h3>
 		<h4>Product's attributes</h4>
 		<ul>
-			<li>sellerId</li>
-			<li>productId</li>
+			<li>SellerId</li>
+			<li>ProductId</li>
 			<li>Name</li>
 			<li>Price</li>
 			<li>Description</li>
