@@ -59,20 +59,22 @@
 			<li>He prints the receipt or store the e-copy in his system</li>
 		</ol>
 		<h2>Conceptual Model:</h2>
-		<h3> Entity #1: Product</h3>
-		<h4>Product attributes;</h4>
+		<h3> Entity #1: Seller</h3>
+		<h4>Seller attributes;</h4>
 		<ul>
+			<li>sellerId</li>
+			<li>Email Account</li>
+			<li>Name</li>
+		</ul>
+		<h3>Entity #2: Product</h3>
+		<h4>Product's attributes</h4>
+		<ul>
+			<li>sellerId</li>
+			<li>productId</li>
 			<li>Name</li>
 			<li>Price</li>
-			<li>description</li>
+			<li>Description</li>
 			<li>Star Rating</li>
-		</ul>
-		<h3>Entity #2: Seller</h3>
-		<h4>Seller's attributes</h4>
-		<ul>
-			<li>Name</li>
-			<li>Email accounts</li>
-			<li>Products</li>
 		</ul>
 		<h3>Relasionships</h3>
 			<p>The seller can have many products, which is a one to many relationship</p>
