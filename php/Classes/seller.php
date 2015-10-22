@@ -27,6 +27,18 @@ class Seller {
 	private $sellerName;
 
 	/**
+	 * constructor for this Seller
+	 *
+	 * @param string $newSellerId id of this Seller or null if a new Seller
+	 * @param string $newSellerEmail string containing actual seller data
+	 * @param string $newSellerName name and null if actual seller
+	 * @throws InvalidArgumentException if data types are not valid
+	 * @throws RangeException if data values are out of bounds (e.g., strings too long, negative integers)
+	 * @throws Exception if some other exception is thrown
+	 **/
+
+
+	/**
 	 * accessor method for seller id
 	 *
 	 * @return int value of seller id
