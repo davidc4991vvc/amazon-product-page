@@ -75,8 +75,8 @@ class Seller {
 	 * @throws RangeException if $newSellerEmail is not positive
 	 **/
 	public function setSellerEmail($newSellerEmail) {
-		//$newEmail = ($newEmail);
-		$newEmail = filter_var($newEmail, FILTER_SANITIZE_STRING);
+		//$newSellerEmail = ($newSellerEmail);
+		$newSellerEmail = filter_var($newSellerEmail, FILTER_SANITIZE_STRING);
 		if(empty($newEmailContent) === true) {
 			throw(new InvalidArgumentException("email account is empty or insecure"));
 		}
@@ -107,9 +107,11 @@ class Seller {
  * @throws RangeException if $newSellerName is not positive
  **/
 	public function setSellerName($newSellerName) {
-		// base case: if the seller name is null, this is a new seller with a mySQL not assigned a name (yet)
-		if($newSellerName === null) {
-			$this->sellerName = null;
+		// public function setSellerName($newSellerName)
+		 $newSellerName = ($newSellerName);
+		 $newSellerName = filter_var($newSellerName, FILTER_SANITIZE_STRING);
+		if(empty($newSellerName) === true) {
+			throw(new InvalidArgumentException("name account is empty or insecure"));
 		}
 		// verify the seller name is valid
 		$newSellerName = filter_var($newSellerName, FILTER_SANITIZE_STRING);
