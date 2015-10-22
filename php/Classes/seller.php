@@ -26,7 +26,15 @@ class Seller {
 	 **/
 	private $sellerName;
 
+	/**
+	 * accessor method for seller id
+	 *
+	 * @return int value of seller id
+ **/
 
+	public function getSellerId() {
+		return ($this->sellerId);
+	}
 	/**
 	 * mutation method for seller id
 	 * @param mixed $newSellerId new value of seller id
@@ -47,22 +55,14 @@ class Seller {
 		}
 
 
-		// verify the tweet id is positive
+		// verify the seller id is positive
 		if($newSellerId <= 0) {
 			throw(new RangeException("seller id is not positive"));
 		}
 
-		// convert and store the tweet id
+		// convert and store the seller id
 		$this->sellerId = intval($newSellerId);
 	}
 
 
-	/**
-	 * accessor method for seller id
-	 *
-	 * @return int value of seller id
-	 **/
-
-	public function getSellerId() {
-		return ($this->sellerId);
-	}}
+}
