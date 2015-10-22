@@ -37,7 +37,7 @@ class Seller {
 	}
 	/**
 	 * mutation method for seller id
-	 * @param mixed $newSellerId new value of seller id
+	 * @param int $newSellerId new value of seller id
 	 * @throws InvalidArgumentException if $newSellerId is not an integer
 	 * @throws RangeException if $newSellerId is not positive
 	 **/
@@ -57,11 +57,9 @@ class Seller {
 		if($newSellerId <= 0) {
 			throw(new RangeException("seller id is not positive"));
 		}
-
 		// convert and store the seller id
 		$this->sellerId = intval($newSellerId);
 	}
-
 	/**
 	 * accessor method for seller email
 	 *
@@ -73,12 +71,11 @@ class Seller {
 	/**
 	 * mutation method for seller email
 	 * @param string $newSellerEmail new value of seller email
-	 * @throws InvalidArgumentException if $newSellerId is not a string
+	 * @throws InvalidArgumentException if $newSellerEmail is not a string
 	 * @throws RangeException if $newSellerEmail is not positive
 	 **/
-
 	public function setSellerEmail($newSellerEmail) {
-		// base case: if the seller email is null, this is a new seller with a mySQL not assigned id (yet)
+		// base case: if the seller email is null, this is a new seller with a mySQL not assigned  email (yet)
 		if($newSellerEmail === null) {
 			$this->sellerEmail = null;
 		}
@@ -94,7 +91,6 @@ class Seller {
 		// convert and store the seller email
 		$this->sellerEmail = intval($newSellerEmail);
 	}
-
 	/**
 	 * accessor method for seller name
 	 *
@@ -114,22 +110,16 @@ class Seller {
 		if($newSellerName === null) {
 			$this->sellerName = null;
 		}
-
 		// verify the seller name is valid
 		$newSellerName = filter_var($newSellerName, FILTER_VALIDATE_STRING);
 		if($newSellerName === false) {
 			throw(new InvalidArgumentException("seller name is not a valid string"));
 		}
-
-
 		// verify the seller id is positive
 		if($newSellerName <= 0) {
 			throw(new RangeException("seller name is not positive"));
 		}
-
 		// convert and store the seller name
 		$this->sellerName = intval($newSellerName);
 	}
-
-
 }
