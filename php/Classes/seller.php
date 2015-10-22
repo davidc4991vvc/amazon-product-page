@@ -16,7 +16,7 @@ class Seller {
 
 	/**
 	 * email address of the seller
-	 * @var mixed $sellerEmail
+	 * @var string $sellerEmail
 	 **/
 	private $sellerEmail;
 
@@ -75,14 +75,15 @@ class Seller {
 	 * @throws RangeException if $newSellerEmail is not positive
 	 **/
 	public function setSellerEmail($newSellerEmail) {
-		// base case: if the seller email is null, this is a new seller with a mySQL not assigned  email (yet)
-		if($newSellerEmail === null) {
-			$this->sellerEmail = null;
+		//$newEmail = ($newEmail);
+		$newEmail = filter_var($newEmail, FILTER_SANITIZE_STRING);
+		if(empty($newEmailContent) === true) {
+			throw(new InvalidArgumentException("email account is empty or insecure"));
 		}
 		// verify the seller email is valid
 		$newSellerEmail = filter_var($newSellerEmail, FILTER_SANITIZE_STRING);
 		if($newSellerEmail === false) {
-			throw(new InvalidArgumentException("seller email is not a valid integer"));
+			throw(new InvalidArgumentException("seller email is not a valid string"));
 		}
 		// verify the seller email is positive
 		if($newSellerEmail <= 0) {
