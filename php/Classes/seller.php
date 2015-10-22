@@ -75,22 +75,19 @@ class Seller {
 	 * @throws RangeException if $newSellerEmail is not positive
 	 **/
 	public function setSellerEmail($newSellerEmail) {
-		//$newSellerEmail = ($newSellerEmail);
+		// verify the seller email  is secure
+		$newSellerEmail = trim($newSellerEmail);
 		$newSellerEmail = filter_var($newSellerEmail, FILTER_SANITIZE_STRING);
-		if(empty($newEmailContent) === true) {
+		if(empty($newSellerEmail) === true) {
 			throw(new InvalidArgumentException("email account is empty or insecure"));
 		}
-		// verify the seller email is valid
-		$newSellerEmail = filter_var($newSellerEmail, FILTER_SANITIZE_STRING);
-		if($newSellerEmail === false) {
-			throw(new InvalidArgumentException("seller email is not a valid string"));
-		}
-		// verify the seller email is positive
-		if($newSellerEmail <= 0) {
-			throw(new RangeException("seller email is not positive"));
+
+			// verify the seller email will fit in the database
+		if(strlen($newSellerEmail) > 128) {
+			throw(new RangeException("seller email too large"));
 		}
 		// convert and store the seller email
-		$this->sellerEmail = intval($newSellerEmail);
+		$this->sellerEmail = $newSellerEmail;
 	}
 	/**
 	 * accessor method for seller name
@@ -108,7 +105,7 @@ class Seller {
  **/
 	public function setSellerName($newSellerName) {
 		// public function setSellerName($newSellerName)
-		 $newSellerName = ($newSellerName);
+		 $newSellerName = trim($newSellerName);
 		 $newSellerName = filter_var($newSellerName, FILTER_SANITIZE_STRING);
 		if(empty($newSellerName) === true) {
 			throw(new InvalidArgumentException("name account is empty or insecure"));
@@ -118,9 +115,9 @@ class Seller {
 		if($newSellerName === false) {
 			throw(new InvalidArgumentException("seller name is not a valid string"));
 		}
-		// verify the seller id is positive
-		if($newSellerName <= 0) {
-			throw(new RangeException("seller name is not positive"));
+		// verify the seller name will fit in the database
+		if(strlen($newSellerName) > 128) {
+			throw(new RangeException("seller email too large"));
 		}
 		// convert and store the seller name
 		$this->sellerName = intval($newSellerName);
