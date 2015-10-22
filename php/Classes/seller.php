@@ -53,11 +53,15 @@
  }
 
  // convert and store the tweet id
- $this->sellerId = intval($newSellerId);
+ 		$this->sellerId = intval($newSellerId);
+
 
 /**
- * accessor method for profile id\
+ * accessor method for seller id
  *
- *  @return int value of profile id
+ *  @return int value of seller id
  **/
 
+ public function getSellerId() {
+	 return($this->sellerId);
+ }
