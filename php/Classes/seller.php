@@ -64,5 +64,41 @@ class Seller {
 		$this->sellerId = intval($newSellerId);
 	}
 
+	/**
+	 * accessor method for seller email
+	 *
+	 * @return int value of seller email
+	 **/
+	public function getSellerEmail() {
+		return ($this->sellerEmail);
+	}/**
+ * mutation method for seller name
+ * @param mixed $newSellerName new value of seller name
+ * @throws InvalidArgumentException if $newSellerName is not an integer
+ * @throws RangeException if $newSellerName is not positive
+ **/
+
+	public function setSellerName($newSellerName) {
+		// base case: if the seller id is null, this is a new seller with a mySQL not assigned id (yet)
+		if($newSellerName === null) {
+			$this->sellerName = null;
+		}
+
+		// verify the seller id is valid
+		$newSellerName = filter_var($newSellerName, FILTER_VALIDATE_INT);
+		if($newSellerName === false) {
+			throw(new InvalidArgumentException("seller name is not a valid integer"));
+		}
+
+
+		// verify the seller id is positive
+		if($newSellerName <= 0) {
+			throw(new RangeException("seller name is not positive"));
+		}
+
+		// convert and store the seller id
+		$this->sellerName = intval($newSellerName);
+	}
+
 
 }
