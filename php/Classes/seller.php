@@ -47,10 +47,17 @@
 			 throw(new InvalidArgumentException("seller id is not a valid integer"));
 
 
+ // verify the tweet id is positive
+ if($newSellerId <= 0) {
+	 throw(new RangeException("seller id is not positive"));
+ }
 
+ // convert and store the tweet id
+ $this->sellerId = intval($newSellerId);
 
-
-
-
-
+/**
+ * accessor method for profile id\
+ *
+ *  @return int value of profile id
+ **/
 
