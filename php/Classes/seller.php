@@ -80,7 +80,7 @@ class Seller {
 			$this->sellerEmail = null;
 		}
 		// verify the seller email is valid
-		$newSellerEmail = filter_var($newSellerEmail, FILTER_VALIDATE_STRING);
+		$newSellerEmail = filter_var($newSellerEmail, FILTER_SANITIZE_STRING);
 		if($newSellerEmail === false) {
 			throw(new InvalidArgumentException("seller email is not a valid integer"));
 		}
@@ -111,7 +111,7 @@ class Seller {
 			$this->sellerName = null;
 		}
 		// verify the seller name is valid
-		$newSellerName = filter_var($newSellerName, FILTER_VALIDATE_STRING);
+		$newSellerName = filter_var($newSellerName, FILTER_SANITIZE_STRING);
 		if($newSellerName === false) {
 			throw(new InvalidArgumentException("seller name is not a valid string"));
 		}
