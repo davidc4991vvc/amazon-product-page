@@ -37,6 +37,24 @@ class Seller {
 	 * @throws Exception if some other exception is thrown
 	 **/
 
+	public function __construct($newSellerId, $newSellerEmail, $newSellerName = null) {
+		try {
+			$this->setSellerId($newSellerId);
+			$this->setSellerEmail($newSellerEmail);
+			$this->setSellerName($newSellerName);
+
+		  }catch(InvalidArgumentException $invalidArgument) {
+				// rethrow the exception to the caller
+				throw(new InvalidArgumentException($invalidArgument->getMessage(), 0, $invalidArgument));
+			} catch(RangeException $range) {
+				// rethrow the exception to the caller
+				throw(new RangeException($range->getMessage(), 0, $range));
+			} catch(Exception $exception) {
+				// rethrow generic exception
+				throw(new Exception($exception->getMessage(), 0, $exception));
+			}
+		}
+
 
 	/**
 	 * accessor method for seller id
