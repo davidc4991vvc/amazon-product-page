@@ -71,7 +71,8 @@ class Seller {
 	 **/
 	public function getSellerEmail() {
 		return ($this->sellerEmail);
-	}/**
+	}
+	/**
  * mutation method for seller name
  * @param mixed $newSellerName new value of seller name
  * @throws InvalidArgumentException if $newSellerName is not an integer
