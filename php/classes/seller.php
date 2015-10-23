@@ -71,8 +71,8 @@ class Seller {
 
 	public function setSellerId($newSellerId) {
 		// base case: if the seller id is null, this is a new seller with a mySQL not assigned id (yet)
-		if($newSellerId === false) {
-			$this->sellerId = false;
+		if($newSellerId === null) {
+			$this->sellerId = null;
 		}
 
 		// verify the seller id is valid
