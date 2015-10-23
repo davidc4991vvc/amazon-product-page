@@ -29,14 +29,14 @@ class Seller {
 	/**
 	 * constructor for this Seller
 	 *
-	 * @param string $newSellerId id of this Seller or null if a new Seller
+	 * @param string $newSellerId id of this Seller or false if a new Seller
 	 * @param string $newSellerEmail string containing actual seller data
-	 * @param string $newSellerName name and null if actual seller
+	 * @param string $newSellerName name and false if actual seller
 	 * @throws InvalidArgumentException if data types are not valid
 	 * @throws RangeException if data values are out of bounds (e.g., strings too long, negative integers)
 	 * @throws Exception if some other exception is thrown
 	 **/
-	public function __construct($newSellerId, $newSellerEmail, $newSellerName = null) {
+	public function __construct($newSellerId, $newSellerEmail, $newSellerName = false) {
 		try {
 			$this->setSellerId($newSellerId);
 			$this->setSellerEmail($newSellerEmail);
@@ -71,8 +71,8 @@ class Seller {
 
 	public function setSellerId($newSellerId) {
 		// base case: if the seller id is null, this is a new seller with a mySQL not assigned id (yet)
-		if($newSellerId === null) {
-			$this->sellerId = null;
+		if($newSellerId === false) {
+			$this->sellerId = false;
 		}
 
 		// verify the seller id is valid
@@ -106,7 +106,7 @@ class Seller {
 	public function setSellerEmail($newSellerEmail) {
 		// verify the seller email  is secure
 		$newSellerEmail = trim($newSellerEmail);
-		$newSellerEmail = filter_var($newSellerEmail, FILTER_SANITIZE_STRING);
+		$newSellerEmail = filter_var($newSellerEmail, FILTER_SANITIZE_EMAIL);
 		if(empty($newSellerEmail) === true) {
 			throw(new InvalidArgumentException("email account is empty or insecure"));
 		}
