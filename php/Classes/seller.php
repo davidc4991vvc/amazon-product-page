@@ -36,7 +36,7 @@ class Seller {
 	 * @throws RangeException if data values are out of bounds (e.g., strings too long, negative integers)
 	 * @throws Exception if some other exception is thrown
 	 **/
-	public function __construct($newSellerId, $newSellerEmail, $newSellerName = false) {
+	public function __construct($newSellerId, $newSellerEmail, $newSellerName) {
 		try {
 			$this->setSellerId($newSellerId);
 			$this->setSellerEmail($newSellerEmail);
@@ -141,11 +141,7 @@ class Seller {
 		if(empty($newSellerName) === true) {
 			throw(new InvalidArgumentException("name account is empty or insecure"));
 		}
-		// verify the seller name is valid
-		$newSellerName = filter_var($newSellerName, FILTER_SANITIZE_STRING);
-		if($newSellerName === false) {
-			throw(new InvalidArgumentException("seller name is not a valid string"));
-		}
+
 		// verify the seller name will fit in the database
 		if(strlen($newSellerName) > 128) {
 			throw(new RangeException("seller email too large"));
