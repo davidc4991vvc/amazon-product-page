@@ -149,4 +149,10 @@ class Seller {
 		// convert and store the seller name
 		$this->sellerName = intval($newSellerName);
 	}
+	/**
+	 * inserts this Seller into mySQL
+	 *
+	 * @param PDO $pdo pointer to PDO connection, by reference
+	 * @throws PDOException when mySQL related errors occur
+	 **/
 }
