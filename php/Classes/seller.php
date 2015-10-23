@@ -36,35 +36,32 @@ class Seller {
 	 * @throws RangeException if data values are out of bounds (e.g., strings too long, negative integers)
 	 * @throws Exception if some other exception is thrown
 	 **/
-
 	public function __construct($newSellerId, $newSellerEmail, $newSellerName = null) {
 		try {
 			$this->setSellerId($newSellerId);
 			$this->setSellerEmail($newSellerEmail);
 			$this->setSellerName($newSellerName);
-
-		  }catch(InvalidArgumentException $invalidArgument) {
-				// rethrow the exception to the caller
-				throw(new InvalidArgumentException($invalidArgument->getMessage(), 0, $invalidArgument));
-			} catch(RangeException $range) {
-				// rethrow the exception to the caller
-				throw(new RangeException($range->getMessage(), 0, $range));
-			} catch(Exception $exception) {
-				// rethrow generic exception
-				throw(new Exception($exception->getMessage(), 0, $exception));
-			}
+		} catch(InvalidArgumentException $invalidArgument) {
+			// rethrow the exception to the
+			throw(new InvalidArgumentException($invalidArgument->getMessage(), 0, $invalidArgument));
+		} catch(RangeException $range) {
+			// rethrow the exception to the caller
+			throw(new RangeException($range->getMessage(), 0, $range));
+		} catch(Exception $exception) {
+			// rethrow generic exception
+			throw(new Exception($exception->getMessage(), 0, $exception));
 		}
-
+	}
 
 	/**
 	 * accessor method for seller id
 	 *
 	 * @return int value of seller id
- **/
-
+	 **/
 	public function getSellerId() {
 		return ($this->sellerId);
 	}
+
 	/**
 	 * mutation method for seller id
 	 * @param int $newSellerId new value of seller id
@@ -90,6 +87,7 @@ class Seller {
 		// convert and store the seller id
 		$this->sellerId = intval($newSellerId);
 	}
+
 	/**
 	 * accessor method for seller email
 	 *
@@ -98,6 +96,7 @@ class Seller {
 	public function getSellerEmail() {
 		return ($this->sellerEmail);
 	}
+
 	/**
 	 * mutation method for seller email
 	 * @param string $newSellerEmail new value of seller email
@@ -112,13 +111,14 @@ class Seller {
 			throw(new InvalidArgumentException("email account is empty or insecure"));
 		}
 
-			// verify the seller email will fit in the database
+		// verify the seller email will fit in the database
 		if(strlen($newSellerEmail) > 128) {
 			throw(new RangeException("seller email too large"));
 		}
 		// convert and store the seller email
 		$this->sellerEmail = $newSellerEmail;
 	}
+
 	/**
 	 * accessor method for seller name
 	 *
@@ -127,16 +127,17 @@ class Seller {
 	public function getSellerName() {
 		return ($this->sellerName);
 	}
+
 	/**
- * mutation method for seller name
- * @param string $newSellerName new value of seller name
- * @throws InvalidArgumentException if $newSellerName is not an integer
- * @throws RangeException if $newSellerName is not positive
- **/
+	 * mutation method for seller name
+	 * @param string $newSellerName new value of seller name
+	 * @throws InvalidArgumentException if $newSellerName is not an integer
+	 * @throws RangeException if $newSellerName is not positive
+	 **/
 	public function setSellerName($newSellerName) {
 		// public function setSellerName($newSellerName)
-		 $newSellerName = trim($newSellerName);
-		 $newSellerName = filter_var($newSellerName, FILTER_SANITIZE_STRING);
+		$newSellerName = trim($newSellerName);
+		$newSellerName = filter_var($newSellerName, FILTER_SANITIZE_STRING);
 		if(empty($newSellerName) === true) {
 			throw(new InvalidArgumentException("name account is empty or insecure"));
 		}
