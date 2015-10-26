@@ -158,39 +158,42 @@ class Seller {
 	 **/
 	public function insert(PDO &$pdo) {
 		// enforce the sellerId is null (i.e., don't insert a seller that already exists)
-		if($this->sellerId !== null)
+		if($this->sellerId !== null) {
 			throw(new PDOException("not a new seller"));
-	}
-}
+		}
+
 // create query template
-$query
-	= "INSERT INTO seller(sellerId, sellerEmail, sellerName)VALUES(:sellerId, :sellerEmail, :sellerName)";
-$statement = $pdo->prepare($query);
+		$query = "INSERT INTO seller(sellerId, sellerEmail, sellerName) VALUES (:sellerId, :sellerEmail, :sellerName)";
+		$statement = $pdo->prepare($query);
 
 // bind the member variables to the place holders in the template
-$parameters = array("sellerId" => $this->sellerId, "sellerEmail" => $this-> sellerEmail, "sellerName"
-	=> $this-> sellerName);
-$statement->execute($parameters);
-
-/**
- * deletes this Seller from mySQL
- *
- * @param PDO $pdo pointer to PDO connection, by reference
- * @throws PDOException when mySQL related errors occur
- **/
-public function delete(PDO &$pdo) {
-	// enforce the sellerId is not null (i.e., don't delete a seller that hasn't been inserted)
-	if($this->sellerId === null) {
-		throw(new PDOException("unable to delete a seller that does not exist"));
+		$parameters = array("sellerId" => $this->sellerId, "sellerEmail" => $this->sellerEmail, "sellerName"
+		=> $this->sellerName);
+		$statement->execute($parameters);
 	}
-// create query template
-	$query = "DELETE FROM seller WHERE sellerId = :sellerId";
-	$statement = $pdo->prepare($query);
 
-	// bind the member variables to the place holder in the template
-	$parameters = array("sellerId" => $this->sellerId, "sellerEmail" => $this-> sellerEmil,
-	"sellerName" => $this->sellerName);
-	$statement->execute($parameters);
+	/**
+	 * deletes this Seller from mySQL
+	 *
+	 * @param PDO $pdo pointer to PDO connection, by reference
+	 * @throws PDOException when mySQL related errors occur
+	 **/
+	public
+	function delete(PDO &$pdo) {
+		// enforce the sellerId is not null (i.e., don't delete a seller that hasn't been inserted)
+		if($this->sellerId === null) {
+			throw(new PDOException("unable to delete a seller that does not exist"));
+		}
+// create query template
+		$query = "DELETE FROM seller WHERE sellerId = :sellerId";
+		$statement = $pdo->prepare($query);
+
+
+// bind the member variables to the place holder in the template
+		$parameters = array("sellerId" => $this->sellerId, "sellerEmail" => $this->sellerEmail,
+			"sellerName" => $this->sellerName);
+		$statement->execute($parameters);
+	}
 
 	/**
 	 * updates this Seller in mySQL
@@ -204,16 +207,17 @@ public function delete(PDO &$pdo) {
 		if($this->sellerId === null) {
 			throw(new PDOException("unable to update a seller that does not exist"));
 		}
-	}
-	// create query template
-	$query
-		= "UPDATE seller SET sellerId = :sellerId, sellerEmail = :sellerEmail, sellerName =
+
+
+// create query template
+		$query
+			= "UPDATE seller SET sellerId = :sellerId, sellerEmail = :sellerEmail, sellerName =
 		:sellerName WHERE sellerId = :sellerId";
-	$statement = $pdo->prepare($query);
+		$statement = $pdo->prepare($query);
 
-	// bind the member variables to the place holders in the template
-	 $parameters = array("sellereId" => $this->sellerId, "sellerEmail" => $this->sellerEmail,
-		"sellerName" => $this->sellerName);
-	$statement->execute($parameters);
-
+// bind the member variables to the place holders in the template
+		$parameters = array("sellereId" => $this->sellerId, "sellerEmail" => $this->sellerEmail,
+			"sellerName" => $this->sellerName);
+		$statement->execute($parameters);
+	}
 }
