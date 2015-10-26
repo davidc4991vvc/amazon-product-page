@@ -188,7 +188,8 @@ public function delete(PDO &$pdo) {
 	$statement = $pdo->prepare($query);
 
 	// bind the member variables to the place holder in the template
-	$parameters = array("sellerId" => $this->sellerId);
+	$parameters = array("sellerId" => $this->sellerId, "sellerEmail" => $this-> sellerEmil,
+	"sellerName" => $this->sellerName);
 	$statement->execute($parameters);
 
 	/**
