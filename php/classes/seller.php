@@ -163,11 +163,11 @@ class Seller {
 		}
 
 // create query template
-		$query = "INSERT INTO seller(sellerId, sellerEmail, sellerName) VALUES (:sellerId, :sellerEmail, :sellerName)";
+		$query = "INSERT INTO seller(sellerEmail, sellerName) VALUES (:sellerEmail, :sellerName)";
 		$statement = $pdo->prepare($query);
 
 // bind the member variables to the place holders in the template
-		$parameters = array("sellerId" => $this->sellerId, "sellerEmail" => $this->sellerEmail, "sellerName"
+		$parameters = array("sellerEmail" => $this->sellerEmail, "sellerName"
 		=> $this->sellerName);
 		$statement->execute($parameters);
 	}
@@ -211,8 +211,7 @@ class Seller {
 
 // create query template
 		$query
-			= "UPDATE seller SET sellerId = :sellerId, sellerEmail = :sellerEmail, sellerName =
-		:sellerName WHERE sellerId = :sellerId";
+			= "UPDATE seller SET sellerEmail = :sellerEmail, sellerName = :sellerName WHERE sellerId = :sellerId";
 		$statement = $pdo->prepare($query);
 
 // bind the member variables to the place holders in the template

@@ -21,7 +21,7 @@
 		<ol>
 			<li>He must opens website</li>
 			<li>He may  or may not create a user account</li>
-			<li>He must enter the name of the product in the site web shopper search engine</li>
+			<li>He must enter the name of the product in the website shopper search engine</li>
 			<li>He get a number of products played from alternative vendors</li>
 			<li>He searches and Clicks on the products</li>
 			<li>He finds the product he is looking for</li>
