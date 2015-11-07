@@ -78,5 +78,6 @@
 		</ul>
 		<h3>Relasionships</h3>
 			<p>The seller can have many products, which is a one to many relationship</p>
+		<img src="img/amazon-product-page.svg" alt="erd"/>
 	</body>
 </html>

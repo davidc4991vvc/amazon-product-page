@@ -23,11 +23,11 @@ CREATE TABLE product (
 );
 
 CREATE TABLE product (
-	productId   INT UNSIGNED AUTO_INCREMENT NOT NULL,
-	sellerId    INT UNSIGNED                NOT NULL,
+	productId INT UNSIGNED AUTO_INCREMENT NOT NULL,
+	sellerId INT UNSIGNED NOT NULL,
 	description VARCHAR(500),
-	name        VARCHAR(32),
-	price       DECIMAL(9, 2)               NOT NULL,
+	name VARCHAR(32),
+	price DECIMAL(9, 2) NOT NULL,
 	starrating  INT,
 	INDEX (productId),
 	FOREIGN KEY (sellerId) REFERENCES seller (sellerId),
