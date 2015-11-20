@@ -9,7 +9,7 @@
  **/
 class Seller {
 	/**
-	 * id of the seller; this is the primary key
+	 * id of the seller; this is the primary keyprice
 	 * @var int $sellerId
 	 **/
 	private $sellerId;
